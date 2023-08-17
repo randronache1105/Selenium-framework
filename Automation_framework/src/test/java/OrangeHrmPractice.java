@@ -11,7 +11,10 @@ public class OrangeHrmPractice {
         WebDriver driver = new ChromeDriver();
         driver.navigate().to("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
         String title = driver.getTitle();
+
+        String URL = driver.getCurrentUrl();
         System.out.println(title);
+        System.out.println(URL);
         driver.close();
     }
 
