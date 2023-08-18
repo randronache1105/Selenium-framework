@@ -20,12 +20,15 @@ public class OrangeHrmPractice {
 
         String text = driver.findElement(By.cssSelector(".oxd-text.oxd-text--h5.orangehrm-login-title")).getText();//show the text ina web page for button login
 
-        String attribute = driver.findElement(By.xpath("//p[@class = \"oxd-text oxd-text--p\"][2]")).getAttribute("class");
+        String attribute = driver.findElement(By.xpath("//form[@class = \"oxd-form\"]")).getAttribute("method"); //take the attribute from value class
+
+        Boolean textBox = driver.findElement(By.xpath("//p[@class=\"oxd-text oxd-text--p\"][2]")).isEnabled();//return true or false if the element exists
 
         System.out.println(title);
         System.out.println(URL);
         System.out.println(text);
         System.out.println(attribute);
+        System.out.println(textBox);
 
         driver.close();
     }
