@@ -27,25 +27,25 @@ public class Tables {
         {
 //Modify Wait time as per the Network Ability in the Thread Sleep method
 
-            driver.get("https://cosmocode.io/automation-practice-webtable/");
+            driver.get("https://chercher.tech/practice/table");
             driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
             Thread.sleep(5000);
 
 //Finding number of Rows
 
-            List<WebElement> rowsNumber = driver.findElements(By.xpath("//table[@id=\"countries\"]/tbody/tr"));
+            List<WebElement> rowsNumber = driver.findElements(By.xpath("//table[@id=\"webtable\"]/tbody/tr"));
             int rowCount = rowsNumber.size();
             System.out.println("No of rows in this table : " + rowCount);
 
 //Finding number of Columns
 
-            List<WebElement> columnsNumber = driver.findElements(By.xpath("//table[@id=\"countries\"]/tbody/tr/td/h3"));
+            List<WebElement> columnsNumber = driver.findElements(By.xpath("//table[@id=\"webtable\"]/tbody/tr/th"));
             int columnCount = columnsNumber.size();
             System.out.println("No of columns in this table : " + columnCount);
 
 //Finding cell value at 4th row and 3rd column
 
-            WebElement cellAddress = driver.findElement(By.xpath("//table[@id=\"countries\"]/tbody/tr[4]/td[2]"));
+            WebElement cellAddress = driver.findElement(By.xpath("//table[@id=\"webtable\"]/tbody/tr[2]/td[1]"));
             String value = cellAddress.getText();
             System.out.println("The Cell Value is : " +value);
 
