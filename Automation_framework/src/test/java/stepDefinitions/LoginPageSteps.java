@@ -9,6 +9,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.openqa.selenium.support.ui.Select;
+
 
 import java.util.concurrent.TimeUnit;
 
@@ -51,5 +53,27 @@ public class LoginPageSteps {
        WebElement name = driver.findElement(By.xpath("//p[@class=\"oxd-userdropdown-name\"]"));
        Assert.assertTrue(name.isDisplayed());
        Assert.assertEquals(name.getText(),"Heet Nanda");
+    }
+
+    @And("I click the Leave link from the menu")
+    public void ClickTheLeaveLinkFromTheMenu() {
+        WebElement leave = driver.findElement(By.xpath("//a[@href=\"/web/index.php/leave/viewLeaveModule\"]"));
+        leave.click();
+
+    }
+
+    @And("I select the Rejected status from the 'Show Leave with Status' section")
+    public void SelectTheRejectedStatus() {
+        driver.findElement(By.xpath("//i[@class=\"oxd-icon bi-caret-down-fill oxd-select-text--arrow\"][1]")).click();
+        WebElement choose = driver.findElement(By.xpath("//*[text()=\"Rejected\"]"));
+        choose.click();
+
+    }
+
+    @Then("I check that the Rejected status is present as a selection by using XPath selector")
+    public void CheckTheRejectedStatus() {
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        WebElement find = driver.findElement(By.xpath("//*[text()=\"Rejected \"]"));
+        Assert.assertTrue(find.isDisplayed());
     }
 }
