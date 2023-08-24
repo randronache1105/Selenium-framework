@@ -1,7 +1,8 @@
-Feature: Log in into your account
+Feature: Log in into your account with valid credentials
 
-    Scenario: Access the Admin panel for a log in customer
-      Given Customer navigates to the website
-      And Customer login to his account
-      And clicks to Admin panel
-      Then Customer can see details about other users
+    Scenario: Verify that the Customer is logged in
+      Given I access https://opensource-demo.orangehrmlive.com/web/index.php/auth/login page
+      When I enter login credentials with Admin and admin123
+      And I press the Login button to log into my account
+      Then I verify that the username is displayed in the navigation bar in the right corner of the application
+      Then I close the browser

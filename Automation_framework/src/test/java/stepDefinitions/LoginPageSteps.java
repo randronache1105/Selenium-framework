@@ -20,8 +20,8 @@ public class LoginPageSteps {
         driver.navigate().to(url);
     }
 
-    @When("I enter invalid login credentials with {} and {}")
-    public void EnterInvalidLoginCredentials(String username, String password) {
+    @When("I enter login credentials with {} and {}")
+    public void EnterLoginCredentials(String username, String password) {
         WebElement name = driver.findElement(By.name("username"));
         name.sendKeys(username);
         WebElement pass = driver.findElement(By.name("password"));
@@ -44,5 +44,12 @@ public class LoginPageSteps {
     @Then("I close the browser")
     public void CloseTheBrowser() {
         driver.quit();
+    }
+
+    @Then("I verify that the username is displayed in the navigation bar in the right corner of the application")
+    public void UsernameInLoginPage() {
+       WebElement name = driver.findElement(By.xpath("//p[@class=\"oxd-userdropdown-name\"]"));
+       Assert.assertTrue(name.isDisplayed());
+       Assert.assertEquals(name.getText(),"Heet Nanda");
     }
 }
