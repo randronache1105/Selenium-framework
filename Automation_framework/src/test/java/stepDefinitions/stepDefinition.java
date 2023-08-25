@@ -1,9 +1,6 @@
 package stepDefinitions;
 
-import PageObjects.ContactDetailsPage;
-import PageObjects.LeavePage;
-import PageObjects.LoginPage;
-import PageObjects.MainMenuPage;
+import PageObjects.*;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -22,6 +19,7 @@ public class stepDefinition {
     @Given("I access {} page")
     public void LogIn(String url){
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().window().maximize();
         driver.navigate().to(url);
     }
 
@@ -104,5 +102,35 @@ public class stepDefinition {
     public void ConfirmationMessage() {
         ContactDetailsPage contactDetailsPage = new ContactDetailsPage(driver);
         contactDetailsPage.ConfirmationMessage();
+    }
+
+    @And("I click the Admin link from the menu")
+    public void ClickTheAdminLink() {
+        ContactDetailsPage contactDetailsPage = new ContactDetailsPage(driver);
+        contactDetailsPage.ClickTheAdminLink();
+    }
+
+    @And("I click on the Configuration dropdown menu button")
+    public void ClickOnTheConfiguration() {
+        AdminPage adminPage = new AdminPage(driver);
+        adminPage.ClickOnTheConfiguration();
+    }
+
+    @And("I click on the Language Packages option")
+    public void ClickOnTheLanguagePackages() {
+        AdminPage adminPage = new AdminPage(driver);
+        adminPage.ClickOnTheLanguagePackages();
+    }
+
+    @And("I click on the Translate button for Spanish - Español language package")
+    public void ClickOnTheTranslate() {
+        AdminPage adminPage = new AdminPage(driver);
+        adminPage.ClickOnTheTranslate();
+    }
+
+    @Then("I should be redirected to the languageCustomization page")
+    public void RedirectedToThePage() {
+        AdminPage adminPage = new AdminPage(driver);
+        adminPage.RedirectedToThePage();
     }
 }

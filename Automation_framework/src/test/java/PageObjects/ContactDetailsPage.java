@@ -45,4 +45,10 @@ public class ContactDetailsPage {
         WebElement message = driver.findElement(By.xpath("//div[@class=\"oxd-toast oxd-toast--success oxd-toast-container--toast\"]"));
         Assert.assertTrue(message.isDisplayed());
     }
+
+    public void ClickTheAdminLink(){
+        WebElement link = driver.findElement(By.xpath("//a[@href=\"/web/index.php/admin/viewAdminModule\"]"));
+        link.click();
+    }
+
 }
