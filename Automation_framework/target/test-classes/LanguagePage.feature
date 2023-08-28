@@ -10,5 +10,5 @@ Feature: Add a new language package
     And I click the Add button to add a new language to the packages
     And I select the language Colognian(Germany) from that list
     And I press the Save to add this new language to my packages
-    #Then I should be redirected to the Language Packages page
+    Then I should be redirected to the Language Packages page
 

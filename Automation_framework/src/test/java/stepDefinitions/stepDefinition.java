@@ -157,4 +157,47 @@ public class stepDefinition {
         AddALanguage addALanguage = new AddALanguage(driver);
         addALanguage.LanguagePackagesPage();
     }
+
+    @And("I select the Change Password option from drop-down user profile menu")
+    public void SelectChangePasswordOption() {
+        PasswordChange passwordChange = new PasswordChange(driver);
+        passwordChange.SelectChangePasswordOption();
+    }
+
+    @And("I enter the current password in the Current Password field")
+    public void EnterTheCurrentPassword() {
+        PasswordChange passwordChange = new PasswordChange(driver);
+        passwordChange.EnterTheCurrentPassword();
+    }
+
+    @And("I enter in the Password field a new password")
+    public void EnterNewPassword() {
+        PasswordChange passwordChange = new PasswordChange(driver);
+        passwordChange.EnterNewPassword();
+    }
+
+    @Then("I verify {} page")
+    public void VerifyNamePage(String header) {
+        LeavePage leavePage = new LeavePage(driver);
+        leavePage.VerifyNamePage(header);
+    }
+
+    @And("I confirm the new password")
+    public void ConfirmTheNewPassword() {
+        PasswordChange passwordChange = new PasswordChange(driver);
+        passwordChange.ConfirmTheNewPassword();
+    }
+
+    @And("I press the Save button to update the password")
+    public void PressSaveButton() {
+        PasswordChange passwordChange = new PasswordChange(driver);
+        passwordChange.PressSaveButton();
+    }
+
+
+    @Then("I should be able to see the confirmation message")
+    public void ShowConfirmationMessage() {
+        PasswordChange passwordChange = new PasswordChange(driver);
+        passwordChange.ShowConfirmationMessage();
+    }
 }

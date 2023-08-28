@@ -29,4 +29,9 @@ public class LeavePage {
         WebElement find = driver.findElement(By.xpath("//*[text()=\"Rejected \"]"));
         Assert.assertTrue(find.isDisplayed());
     }
+
+    public void VerifyNamePage(String header) {
+        WebElement page = driver.findElement(By.xpath("//h6[@class=\"oxd-text oxd-text--h6 oxd-topbar-header-breadcrumb-module\"]"));
+        Assert.assertEquals(page.getText(), header);
+    }
 }
