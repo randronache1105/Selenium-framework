@@ -34,4 +34,28 @@ public class LeavePage {
         WebElement page = driver.findElement(By.xpath("//h6[@class=\"oxd-text oxd-text--h6 oxd-topbar-header-breadcrumb-module\"]"));
         Assert.assertEquals(page.getText(), header);
     }
+
+    public void ThreeDotsButton(){
+        driver.findElement(By.xpath("//i[@class=\"oxd-icon bi-three-dots-vertical\"][1]")).click();
+    }
+
+    public void SelectToAddComment(){
+        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+        driver.findElement(By.xpath("//*[text()='Add Comment']")).click();
+    }
+
+    public void EnterAComment(){
+        WebElement comment = driver.findElement(By.xpath("//textarea[@class=\"oxd-textarea oxd-textarea--active oxd-textarea--resize-vertical\"]"));
+        comment.click();
+        comment.sendKeys("A comment");
+    }
+
+    public void SaveTheComment(){
+        driver.findElement(By.xpath("//div[@data-v-cbb6349a]/button[@type=\"submit\"]")).click();
+    }
+
+    public void SeeCommentConfirmationMessage(){
+        WebElement message = driver.findElement(By.xpath("//p[@class=\"oxd-text oxd-text--p oxd-text--toast-message oxd-toast-content-text\"]"));
+        Assert.assertEquals(message.getText(), "Successfully Saved");
+    }
 }

@@ -200,4 +200,34 @@ public class stepDefinition {
         PasswordChange passwordChange = new PasswordChange(driver);
         passwordChange.ShowConfirmationMessage();
     }
+
+    @And("I click on the button with three dots which is located in the left corner for an employee record")
+    public void ThreeDotsButton() {
+        LeavePage leavePage = new LeavePage(driver);
+        leavePage.ThreeDotsButton();
+    }
+
+    @And("I select to Add Comment from that list")
+    public void SelectToAddComment() {
+        LeavePage leavePage = new LeavePage(driver);
+        leavePage.SelectToAddComment();
+    }
+
+    @And("I enter a comment in the Leave Request Comments section")
+    public void EnterAComment() {
+        LeavePage leavePage = new LeavePage(driver);
+        leavePage.EnterAComment();
+    }
+
+    @And("I save the comment")
+    public void SaveTheComment() {
+        LeavePage leavePage = new LeavePage(driver);
+        leavePage.SaveTheComment();
+    }
+
+    @Then("I should be able to see the confirmation message that the comment was added successfully")
+    public void SeeCommentConfirmationMessage() {
+        LeavePage leavePage = new LeavePage(driver);
+        leavePage.SeeCommentConfirmationMessage();
+    }
 }
