@@ -133,4 +133,28 @@ public class stepDefinition {
         AdminPage adminPage = new AdminPage(driver);
         adminPage.RedirectedToThePage();
     }
+
+    @And("I click the Add button to add a new language to the packages")
+    public void AddANewLanguage() {
+        AddALanguage addALanguage = new AddALanguage(driver);
+        addALanguage.AddANewLanguage();
+    }
+
+    @And("I select the language Colognian\\(Germany) from that list")
+    public void SelectLanguage() {
+        AddALanguage addALanguage = new AddALanguage(driver);
+        addALanguage.SelectLanguage();
+    }
+
+    @And("I press the Save to add this new language to my packages")
+    public void PressSave() {
+        AddALanguage addALanguage = new AddALanguage(driver);
+        addALanguage.PressSave();
+    }
+
+    @Then("I should be redirected to the Language Packages page")
+    public void LanguagePackagesPage() {
+        AddALanguage addALanguage = new AddALanguage(driver);
+        addALanguage.LanguagePackagesPage();
+    }
 }
