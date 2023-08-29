@@ -230,4 +230,28 @@ public class stepDefinition {
         LeavePage leavePage = new LeavePage(driver);
         leavePage.SeeCommentConfirmationMessage();
     }
+
+    @And("I select a specific period for which I want to see the records")
+    public void SelectASpecificPeriod() {
+        LeavePage leavePage = new LeavePage(driver);
+        leavePage.SelectASpecificPeriod();
+    }
+
+    @And("I set Leave Type as US - Vacation")
+    public void SetLeaveTypeAsUSVacation() {
+        LeavePage leavePage = new LeavePage(driver);
+        leavePage.SetLeaveTypeAsUSVacation();
+    }
+
+    @And("I press search button")
+    public void PressSearchButton() {
+        LeavePage leavePage = new LeavePage(driver);
+        leavePage.PressSearchButton();
+    }
+
+    @Then("I should see all the records with all the data entered")
+    public void SeeAllTheRecords() {
+        LeavePage leavePage = new LeavePage(driver);
+        leavePage.SeeAllTheRecords();
+    }
 }
