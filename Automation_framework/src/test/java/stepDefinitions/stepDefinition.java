@@ -321,4 +321,64 @@ public class stepDefinition {
         AdminPage adminPage = new AdminPage(driver);
         adminPage.ClickTheSaveButtonToAddTheNewJob();
     }
+
+    @And("I click on the My Info link on the menu which will redirect me to the PersonalDetails page")
+    public void iClickOnTheMyInfoLink() {
+        MyInfoPage myInfoPage = new MyInfoPage(driver);
+        myInfoPage.iClickOnTheMyInfoLink();
+    }
+
+    @And("I click on the profile picture")
+    public void iClickOnTheProfilePicture() {
+        MyInfoPage myInfoPage = new MyInfoPage(driver);
+        myInfoPage.iClickOnTheProfilePicture();
+    }
+
+    @And("I add a picture")
+    public void AddAPicture() {
+        MyInfoPage myInfoPage = new MyInfoPage(driver);
+        myInfoPage.AddAPicture();
+    }
+
+    @And("I click the Save button")
+    public void ClickTheSaveButton() {
+        MyInfoPage myInfoPage = new MyInfoPage(driver);
+        myInfoPage.ClickTheSaveButton();
+    }
+
+    @Then("I can see that my profile picture has been updated")
+    public void MyProfilePictureHasBeenUpdated() {
+        MyInfoPage myInfoPage = new MyInfoPage(driver);
+        myInfoPage.MyProfilePictureHasBeenUpdated();
+    }
+
+    @And("I select the Contact Details link which will redirect me to the contactDetails page")
+    public void SelectTheContactDetails() {
+        ContactDetails contactDetails = new ContactDetails(driver);
+        contactDetails.SelectTheContactDetails();
+    }
+
+    @And("I tick the checkbox to select one record saved in the Records Found section")
+    public void TickTheCheckbox() {
+        ContactDetails contactDetails = new ContactDetails(driver);
+        contactDetails.TickTheCheckbox();
+    }
+
+    @And("I press the Delete button to delete that record")
+    public void PressTheDeleteButton() {
+        ContactDetails contactDetails = new ContactDetails(driver);
+        contactDetails.PressTheDeleteButton();
+    }
+
+    @And("I press Yes to confirm this deletion")
+    public void PressYesToConfirmThisDeletion() {
+        ContactDetails contactDetails = new ContactDetails(driver);
+        contactDetails.PressYesToConfirmThisDeletion();
+    }
+
+    @Then("I should receive a confirmation message that the record has been deleted successfully")
+    public void RecordHasBeenDeletedSuccessfully() {
+        ContactDetails contactDetails = new ContactDetails(driver);
+        contactDetails.RecordHasBeenDeletedSuccessfully();
+    }
 }
