@@ -105,7 +105,43 @@ public class LeavePage {
     }
 
     public void SeeAllTheRecords(){
+        WebElement records = driver.findElement(By.xpath("//*[@class=\"oxd-text oxd-text--span\"]"));
+        Assert.assertNotEquals(records.getText(), "No Records Found");
+    }
+
+    public void SelectAPeriod(){
+        WebElement date = driver.findElement(By.xpath("//div[1]/div/div/div/div/i[@class=\"oxd-icon bi-calendar oxd-date-input-icon\"]"));
+        date.click();
+        driver.findElement(By.xpath("//li[@class=\"oxd-calendar-selector-month\"]")).click();
+        driver.findElement(By.xpath("//*[text() = 'December']")).click();
+        driver.findElement(By.xpath("//li[@class=\"oxd-calendar-selector-year\"]/div/i[@class=\"oxd-icon bi-caret-down-fill oxd-icon-button__icon\"]")).click();
+        driver.findElement(By.xpath("//*[text()='2021']")).click();
+        driver.findElement(By.xpath("//div[@class=\"oxd-calendar-dates-grid\"]"));
+        WebElement d = driver.findElement(By.xpath("//*[text()='1']"));
+        d.click();
+    }
+
+    public void SelectLeaveTypeAsCANPersonal(){
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(151,0)", "");
+        driver.findElement(By.xpath("//div[1]/div/div/div/div/div/div/div[text()='-- Select --']")).click();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.findElement(By.xpath("//div[@role=\"option\"]/span[text()='CAN - Personal']")).click();
+    }
+    public void EnterNameInTheEmployeeNameField(){
+        WebElement InputName = driver.findElement(By.xpath("//input[@placeholder=\"Type for hints...\"]"));
+        InputName.click();
+        InputName.sendKeys("Anthony Nolan");
+        driver.findElement(By.xpath("//*[text()='Anthony  Nolan']")).click();
+    }
+
+    public void ClickOnTheResetButton(){
+        driver.findElement(By.xpath("//button[@type=\"reset\"]")).click();
+    }
+
+    public void PopUpMessageThatSaysNoRecordsFound(){
         WebElement norecords = driver.findElement(By.xpath("//*[@class=\"oxd-text oxd-text--span\"]"));
-        Assert.assertNotEquals(norecords.getText(), "No Records Found");
+        Assert.assertEquals(norecords.getText(), "No Records Found");
     }
 }

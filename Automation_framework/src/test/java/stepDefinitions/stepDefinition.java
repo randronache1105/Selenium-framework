@@ -254,4 +254,35 @@ public class stepDefinition {
         LeavePage leavePage = new LeavePage(driver);
         leavePage.SeeAllTheRecords();
     }
+
+
+    @And("I select a period from 2021-12-01 to 2023-12-31")
+    public void SelectAPeriod() {
+        LeavePage leavePage = new LeavePage(driver);
+        leavePage.SelectAPeriod();
+    }
+
+    @And("I select Leave Type as CAN - Personal")
+    public void SelectLeaveTypeAsCANPersonal() {
+        LeavePage leavePage = new LeavePage(driver);
+        leavePage.SelectLeaveTypeAsCANPersonal();
+    }
+
+    @And("I enter Anthony Nolan in the Employee Name field")
+    public void EnterNameInTheEmployeeNameField() {
+        LeavePage leavePage = new LeavePage(driver);
+        leavePage.EnterNameInTheEmployeeNameField();
+    }
+
+    @And("I click on the Reset button")
+    public void ClickOnTheResetButton() {
+        LeavePage leavePage = new LeavePage(driver);
+        leavePage.ClickOnTheResetButton();
+    }
+
+    @Then("I should see a pop-up message that says no records found")
+    public void PopUpMessageThatSaysNoRecordsFound() {
+        LeavePage leavePage = new LeavePage(driver);
+        leavePage.PopUpMessageThatSaysNoRecordsFound();
+    }
 }
