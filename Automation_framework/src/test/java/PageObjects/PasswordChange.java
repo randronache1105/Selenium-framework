@@ -6,11 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-public class PasswordChange {
-    public WebDriver driver;
+public class PasswordChange extends BasePage{
     public PasswordChange(WebDriver driver){
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
+        super(driver);
     }
 
     public void SelectChangePasswordOption(){

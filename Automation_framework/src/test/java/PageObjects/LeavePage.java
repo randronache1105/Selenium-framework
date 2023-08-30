@@ -13,12 +13,10 @@ import org.testng.Assert;
 
 import java.util.concurrent.TimeUnit;
 
-public class LeavePage {
-    public WebDriver driver;
+public class LeavePage extends BasePage{
 
     public LeavePage(WebDriver driver){
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
+        super(driver);
     }
 
     public void SelectTheRejectedStatus() {

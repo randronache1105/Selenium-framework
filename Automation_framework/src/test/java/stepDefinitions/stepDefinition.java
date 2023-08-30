@@ -285,4 +285,40 @@ public class stepDefinition {
         LeavePage leavePage = new LeavePage(driver);
         leavePage.PopUpMessageThatSaysNoRecordsFound();
     }
+
+    @And("I select the Job Titles option from the Job menu dropdown")
+    public void SelectTheJobTitlesOption() {
+        AdminPage adminPage = new AdminPage(driver);
+        adminPage.SelectTheJobTitlesOption();
+    }
+
+    @And("I click the Add button to add a new job")
+    public void ClickTheAddButtonToAddANewJob() {
+        AdminPage adminPage = new AdminPage(driver);
+        adminPage.ClickTheAddButtonToAddANewJob();
+    }
+
+    @And("I add a name for the job in the Job Title field")
+    public void AddANameForTheJob() {
+        AdminPage adminPage = new AdminPage(driver);
+        adminPage.AddANameForTheJob();
+    }
+
+    @And("I add a job description")
+    public void AddAJobDescription() {
+        AdminPage adminPage = new AdminPage(driver);
+        adminPage.AddAJobDescription();
+    }
+
+    @And("I add a Job Specification file")
+    public void AddAJobSpecificationFile() {
+        AdminPage adminPage = new AdminPage(driver);
+        adminPage.AddAJobSpecificationFile();
+    }
+
+    @And("I click the Save button to add the new job")
+    public void ClickTheSaveButtonToAddTheNewJob() {
+        AdminPage adminPage = new AdminPage(driver);
+        adminPage.ClickTheSaveButtonToAddTheNewJob();
+    }
 }

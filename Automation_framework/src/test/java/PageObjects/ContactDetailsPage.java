@@ -9,13 +9,10 @@ import org.testng.Assert;
 
 import java.util.concurrent.TimeUnit;
 
-public class ContactDetailsPage {
-
-    public WebDriver driver;
+public class ContactDetailsPage extends BasePage{
 
     public ContactDetailsPage(WebDriver driver){
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
+        super(driver);
     }
 
     public void AccessContactDetails() {

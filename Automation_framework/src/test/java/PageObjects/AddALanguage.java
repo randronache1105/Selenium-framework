@@ -6,12 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-public class AddALanguage {
-    public WebDriver driver;
-
+public class AddALanguage extends BasePage {
     public AddALanguage(WebDriver driver){
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
+        super(driver);
     }
 
     public void AddANewLanguage() {
