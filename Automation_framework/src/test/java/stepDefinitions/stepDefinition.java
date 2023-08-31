@@ -381,4 +381,22 @@ public class stepDefinition {
         ContactDetails contactDetails = new ContactDetails(driver);
         contactDetails.RecordHasBeenDeletedSuccessfully();
     }
+
+    @And("I click on the Recruitment option from the menu")
+    public void ClickOnTheRecruitmentOption() {
+        VacanciesRecord vacanciesRecord = new VacanciesRecord(driver);
+        vacanciesRecord.ClickOnTheRecruitmentOption();
+    }
+
+    @And("I click on the Vacancies option")
+    public void ClickOnTheVacanciesOption() {
+        VacanciesRecord vacanciesRecord = new VacanciesRecord(driver);
+        vacanciesRecord.ClickOnTheVacanciesOption();
+    }
+
+    @And("I search for vacancies with job title as Account Assistant")
+    public void SearchForVacanciesWithJobTitleAsAccountAssistant() {
+        VacanciesRecord vacanciesRecord = new VacanciesRecord(driver);
+        vacanciesRecord.SearchForVacanciesWithJobTitleAsAccountAssistant();
+    }
 }

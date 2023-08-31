@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 public class ContactDetails extends BasePage{
+
     public ContactDetails(WebDriver driver) {
         super(driver);
     }
