@@ -399,4 +399,35 @@ public class stepDefinition {
         VacanciesRecord vacanciesRecord = new VacanciesRecord(driver);
         vacanciesRecord.SearchForVacanciesWithJobTitleAsAccountAssistant();
     }
+
+    @And("I click on the PIM option from the menu")
+    public void ClickOnThePIMOption() {
+        AddAnEmployee addAnEmployee = new AddAnEmployee(driver);
+        addAnEmployee.ClickOnThePIMOption();
+    }
+
+    @And("I choose the Add Employee option")
+    public void ChooseTheAddEmployeeOption() {
+        AddAnEmployee addAnEmployee = new AddAnEmployee(driver);
+        addAnEmployee.ChooseTheAddEmployeeOption();
+    }
+
+    @And("I enter the employee's full name in the Employee Full Name section")
+    public void EnterTheEmployeeSFullName() {
+        AddAnEmployee addAnEmployee = new AddAnEmployee(driver);
+        addAnEmployee.EnterTheEmployeeSFullName();
+    }
+
+
+    @And("I click the Create Login Details button to make the option available")
+    public void ClickTheCreateLoginDetailsButton() {
+        AddAnEmployee addAnEmployee = new AddAnEmployee(driver);
+        addAnEmployee.ClickTheCreateLoginDetailsButton();
+    }
+
+    @And("I add a username and password")
+    public void AddAUsernameAndPassword() {
+        AddAnEmployee addAnEmployee = new AddAnEmployee(driver);
+        addAnEmployee.AddAUsernameAndPassword();
+    }
 }
