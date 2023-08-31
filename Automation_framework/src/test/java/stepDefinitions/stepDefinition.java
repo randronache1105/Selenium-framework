@@ -474,4 +474,47 @@ public class stepDefinition {
         EmployeeRecord employeeRecord = new EmployeeRecord(driver);
         employeeRecord.SeeThatTheEmployeeID();
     }
+
+    @And("I click on the Recruitment link from the menu which will redirect me to the viewCandidates page")
+    public void ClickOnTheRecruitment() {
+        ScheduleInterview scheduleInterview = new ScheduleInterview(driver);
+        scheduleInterview.ClickOnTheRecruitment();
+    }
+
+    @And("I click on the view icon located in the Actions section to see a candidate's application in Status Shortlisted")
+    public void ClickOnTheViewIcon() {
+        ScheduleInterview scheduleInterview = new ScheduleInterview(driver);
+        scheduleInterview.ClickOnTheViewIcon();
+    }
+
+    @And("I click the Schedule Interview button for that candidate")
+    public void iClickTheScheduleInterviewButtonForThatCandidate() {
+        ScheduleInterview scheduleInterview = new ScheduleInterview(driver);
+        scheduleInterview.iClickTheScheduleInterviewButtonForThatCandidate();
+    }
+
+    @And("I add the title of the interview")
+    public void iAddTheTitleOfTheInterview() {
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        ScheduleInterview scheduleInterview = new ScheduleInterview(driver);
+        scheduleInterview.iAddTheTitleOfTheInterview();
+    }
+
+    @And("I add two interviewers in the Interviewer field")
+    public void iAddTwoInterviewersInTheInterviewerField() {
+        ScheduleInterview scheduleInterview = new ScheduleInterview(driver);
+        scheduleInterview.iAddTwoInterviewersInTheInterviewerField();
+    }
+
+    @And("I select a date and hour")
+    public void iSelectADateAndHour() {
+        ScheduleInterview scheduleInterview = new ScheduleInterview(driver);
+        scheduleInterview.iSelectADateAndHour();
+    }
+
+    @And("I press the Save button to schedule the interview")
+    public void iPressTheSaveButtonToScheduleTheInterview() {
+        ScheduleInterview scheduleInterview = new ScheduleInterview(driver);
+        scheduleInterview.iPressTheSaveButtonToScheduleTheInterview();
+    }
 }
