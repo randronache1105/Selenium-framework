@@ -20,6 +20,6 @@ public class BasePage {
 
     protected WebElement waitForElementVisible(By element) {
         WebDriverWait wait = new WebDriverWait(this.getDriver(), 10L);
-        return (WebElement)wait.until(ExpectedConditions.visibilityOfElementLocated(element));
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(element));
     }
 }

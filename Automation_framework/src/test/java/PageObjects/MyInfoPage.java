@@ -22,7 +22,7 @@ public class MyInfoPage extends BasePage {
 
     public void AddAPicture(){
         //waitForElementVisible(By.xpath("//div[@class=\"oxd-file-div oxd-file-div--active\"]"));
-        WebElement file = driver.findElement(By.xpath("//i[@class=\"oxd-icon bi-plus\"]"));
+        WebElement file = driver.findElement(By.xpath("//input[@type=\"file\"]"));
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         file.sendKeys("/Users/randronache/Desktop/tree-736885_1280.jpg");
     }
