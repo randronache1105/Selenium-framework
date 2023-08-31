@@ -430,4 +430,48 @@ public class stepDefinition {
         AddAnEmployee addAnEmployee = new AddAnEmployee(driver);
         addAnEmployee.AddAUsernameAndPassword();
     }
+
+    @And("I click on the Maintenance option from the menu which will redirect me to the purgeEmployee page")
+    public void ClickOnTheMaintenanceOption() {
+        EmployeeRecord employeeRecord = new EmployeeRecord(driver);
+        employeeRecord.ClickOnTheMaintenanceOption();
+    }
+
+    @And("I enter my password to validate my administrator credentials")
+    public void EnterMyPasswordToValidateMyAdministratorCredentials() {
+        EmployeeRecord employeeRecord = new EmployeeRecord(driver);
+        employeeRecord.EnterMyPasswordToValidateMyAdministratorCredentials();
+    }
+
+
+    @And("I click the Confirm button")
+    public void ClickTheConfirmButton() {
+        EmployeeRecord employeeRecord = new EmployeeRecord(driver);
+        employeeRecord.ClickTheConfirmButton();
+    }
+
+    @And("I click on the Access Records option")
+    public void ClickOnTheAccessRecordsOption() {
+        EmployeeRecord employeeRecord = new EmployeeRecord(driver);
+        employeeRecord.ClickOnTheAccessRecordsOption();
+    }
+
+    @And("I enter Anthony Anadebe in the Employee Name field")
+    public void EnterTheEmployeeNameField() {
+        EmployeeRecord employeeRecord = new EmployeeRecord(driver);
+        employeeRecord.EnterTheEmployeeNameField();
+    }
+
+
+    @And("click on the Search button")
+    public void clickOnTheSearchButton() {
+        EmployeeRecord employeeRecord = new EmployeeRecord(driver);
+        employeeRecord.clickOnTheSearchButton();
+    }
+
+    @Then("I can see that the employee ID is displayed in the Selected Employee section by using css selector")
+    public void SeeThatTheEmployeeID() {
+        EmployeeRecord employeeRecord = new EmployeeRecord(driver);
+        employeeRecord.SeeThatTheEmployeeID();
+    }
 }
