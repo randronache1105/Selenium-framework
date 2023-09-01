@@ -517,4 +517,22 @@ public class stepDefinition {
         ScheduleInterview scheduleInterview = new ScheduleInterview(driver);
         scheduleInterview.iPressTheSaveButtonToScheduleTheInterview();
     }
+
+    @And("I click the Add Attachments button")
+    public void iClickTheAddAttachmentsButton() {
+        MyInfoPage myInfoPage = new MyInfoPage(driver);
+        myInfoPage.iClickTheAddAttachmentsButton();
+    }
+
+    @And("I add a comment for this document uploaded in the comment field")
+    public void iAddACommentForThisDocumentUploaded() {
+        MyInfoPage myInfoPage = new MyInfoPage(driver);
+        myInfoPage.iAddACommentForThisDocumentUploaded();
+    }
+
+    @And("I press the Save button for this attachment added")
+    public void iPressTheSaveButtonForThisAttachmentAdded() {
+        MyInfoPage myInfoPage = new MyInfoPage(driver);
+        myInfoPage.iPressTheSaveButtonForThisAttachmentAdded();
+    }
 }

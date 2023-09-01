@@ -7,9 +7,7 @@ Feature: Schedule An Interview
     And I click on the Recruitment link from the menu which will redirect me to the viewCandidates page
     And I click on the view icon located in the Actions section to see a candidate's application in Status Shortlisted
     And I click the Schedule Interview button for that candidate
-
     And I add two interviewers in the Interviewer field
     And I add the title of the interview
     And I select a date and hour
     And I press the Save button to schedule the interview
-#    Then I should see the confirmation message for this scheduled interview
